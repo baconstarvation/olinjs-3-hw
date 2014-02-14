@@ -2,4 +2,6 @@
 // reminder: create subsequent model and view.
 
 // routes
-// new ingredient ... createIngredient
+export.listOrder = function(req, res) {
+	// insert some code here
+};

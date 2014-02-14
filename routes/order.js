@@ -1,6 +1,11 @@
 
 // reminder: create subsequent model and view.
-// routes
 
-// new order ....   createOrder
-// list orders .... listOrder
+// routes
+exports.createOrder = function(req, res) {
+	// insert some code here
+};
+
+exports.listOrder = function(req, res) {
+	// insert some code here
+};
