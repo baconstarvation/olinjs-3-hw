@@ -11,15 +11,6 @@ exports.listOrder = function(req, res) {
 };
 
 
-// this goes inside either/or/both createOrder and listOrder
-var hodor = new Order({ /* logic for creating an order */});
-
-// error notification
-hodor.save(function (err) {
-	if (err)
-		return console.log('error. hodor dropped bran');
-	res.render('ingredient saved!');
-});
 
 /*
 exports.newCat = function(req, res) {
