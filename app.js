@@ -29,6 +29,8 @@ app.configure('development', function(){
 app.get('/ingredient/create', ingredient.createIngredient);
 app.get('/order/create', order.createOrder);
 app.get('/order', order.listOrder);
+// app.post('/', routes.index_post);
+// app.post('/delete/:id', routes.index_delete);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

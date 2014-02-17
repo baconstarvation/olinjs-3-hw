@@ -1,22 +1,59 @@
 
 // reminder: create subsequent model and view.
 
+var todos = [];
+
 // routes
-exports.listOrder = function(req, res) {
-	// insert some code here
+exports.createIngredient = function(req, res) {
+	res.render('createIngredient', {
+		title: 'Create an Ingredient' {
+		todos: todos
+	});
+};
+
+exports.ingredient_post = function (req, res) {
+	todos.push(req.body.todo);
+	res.redirect('/');
+};
+
+exports.ingredient_delete = function (req, res) {
+	todos.splice(parseInt(req.params.id), 1);
+	res.redirect('/');
 };
 
 
-
-// this goes inside either/or/both createOrder and listOrder
-var hodor = new Order({ /* logic for creating an order */});
+// var hodor = new Ingredient({ /* logic for creating an order */});
 
 // error notification
-hodor.save(function (err) {
-	if (err)
-		return console.log('error. hodor dropped bran');
-	res.render('ingredient saved!');
-});
+// hodor.save(function (err) {
+//	if (err)
+//		return console.log('error. hodor dropped bran');
+//	res.render('ingredient saved!');
+// });
+
+
+/*
+var todos = [];
+
+exports.index = function (req, res) {
+  res.render('index', {
+    title: 'Todo list',
+    todos: todos
+  });
+};
+
+exports.index_post = function (req, res) {
+  todos.push(req.body.todo);
+  res.redirect('/');
+};
+
+exports.index_delete = function (req, res) {
+  todos.splice(parseInt(req.params.id), 1);
+  res.redirect('/');
+};
+*/
+
+
 
 /*
 exports.newCat = function(req, res) {
