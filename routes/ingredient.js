@@ -5,7 +5,7 @@ var todos = [];
 
 // routes
 exports.createIngredient = function(req, res) {
-	res.render('createIngredient', {
+	res.render('enter in an ingredient', {
 		title: 'Create an Ingredient' {
 		todos: todos
 	});

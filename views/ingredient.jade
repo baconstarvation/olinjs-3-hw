@@ -1,28 +1,18 @@
-form
-input 
-submit
-
-form(action="/bankity/boop", method=MADNESS)
-
-
-
-
-
 extends layout
 
 block content
-  h1= title
+	h1= title
 
-  form(method='post', action='/', id="newform")
-    | New todo item:
-    input(name='todo', id="newinput")
-    button('type='submit')
-      | Done
+	form(method='post', action='/ingredient/createIngredient'. id="newform")
+		| Ingredient Name:
+		input(name='todo', id="newinput")
+		button('type='submit')
+			| Done
 
-  ul(id="todolist")
-    each todo, i in todos
-      li
-        div= todo
-        form(method='post', action='/delete/' + i) 
-          button
-            | Delete
+	ul(id="create ingredient")
+		each todo, i in todos
+			li
+				div= todo
+				form(method='post', action='/delete/' + i)
+					button
+						| Delete
