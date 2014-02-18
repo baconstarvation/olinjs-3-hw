@@ -6,19 +6,19 @@ var todos = [];
 // routes
 exports.createIngredient = function(req, res) {
 	res.render('ingredient', {
-		title: 'Create an Ingredient',
+		title: 'enter in an ingredient',
 		todos: todos
 	});
 };
 
 exports.ingredient_post = function (req, res) {
 	todos.push(req.body.todo);
-	res.redirect('/');
+	res.redirect('/ingredient/create');
 };
 
 exports.ingredient_delete = function (req, res) {
 	todos.splice(parseInt(req.params.id), 1);
-	res.redirect('/');
+	res.redirect('/ingredient/create');
 };
 
 

@@ -26,11 +26,11 @@ app.configure('development', function(){
 
 // app.get('/', ?????);
 // app.get('/ingredient', ?????)
-app.get('/ingredient/create', ingredient.createIngredient);
-app.get('/order/create', order.createOrder);
+app.get('/ingredient/new', ingredient.createIngredient);
+app.get('/order/new', order.createOrder);
 app.get('/order', order.listOrder);
-// app.post('/', routes.index_post);
-// app.post('/delete/:id', routes.index_delete);
+app.post('/', ingredient.ingredient_post);
+app.post('/delete/:id', ingredient.ingredient_delete);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
