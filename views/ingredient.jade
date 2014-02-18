@@ -3,7 +3,8 @@ extends layout
 block content
 	h1= title
 
-	form(method='post', action='/ingredient/new', id="newform")
+
+	form(action='/ingredient/create', method='post')
 		| Ingredient Name
 		input(name='todo', id="newinput")
 		| Cost

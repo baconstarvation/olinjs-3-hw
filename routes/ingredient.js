@@ -1,6 +1,3 @@
-
-// reminder: create subsequent model and view.
-
 var todos = [];
 
 // routes
